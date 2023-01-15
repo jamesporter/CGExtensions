@@ -87,4 +87,8 @@ public extension CGPoint {
   func constrained(min minPt: CGPoint, max maxPt: CGPoint) -> CGPoint {
     CGPoint(x: max(minPt.x, min(maxPt.x, self.x)), y: max(minPt.y, min(maxPt.y, self.y)))
   }
+  
+  var size: CGSize {
+    CGSize(x,y)
+  }
 }
