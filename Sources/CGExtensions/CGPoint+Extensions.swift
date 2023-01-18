@@ -29,7 +29,15 @@ public extension CGPoint {
     CGPoint(x: left.x + right.x, y: left.y + right.y)
   }
   
+  static func + (left: CGPoint, right: CGSize) -> CGPoint {
+    CGPoint(x: left.x + right.width, y: left.x + right.height)
+  }
+  
   static func += (left: inout CGPoint, right: CGPoint) {
+    left = left + right
+  }
+  
+  static func += (left: inout CGPoint, right: CGSize) {
     left = left + right
   }
   
