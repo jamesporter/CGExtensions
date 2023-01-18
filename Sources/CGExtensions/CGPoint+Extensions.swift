@@ -16,13 +16,13 @@ public extension CGPoint {
     sqrt(x*x + y*y)
   }
   
-  func normalized() -> CGPoint {
+  var normalized: CGPoint {
     let len = magnitude
     return magnitude > 0 ? self / len : CGPoint.zero
   }
   
   mutating func normalize() {
-    self = normalized()
+    self = normalized
   }
   
   static func + (left: CGPoint, right: CGPoint) -> CGPoint {
