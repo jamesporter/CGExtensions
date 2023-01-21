@@ -57,6 +57,14 @@ public extension CGPoint {
     left = left * right
   }
   
+  static func * (left: CGPoint, right: CGSize) -> CGPoint {
+    CGPoint(x: left.x * right.width, y: left.y * right.height)
+  }
+  
+  static func *= (left: inout CGPoint, right: CGSize) {
+    left = left * right
+  }
+  
   static func * (point: CGPoint, scalar: CGFloat) -> CGPoint {
     CGPoint(x: point.x * scalar, y: point.y * scalar)
   }
